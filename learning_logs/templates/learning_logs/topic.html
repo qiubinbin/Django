@@ -11,7 +11,7 @@
     <ul>
         {% for entry in entries%}
             <P>{{entry.data_added|date:'M d, Y H:i'}}</P>
-            <p>{{entry.text|linebreaks}}</p>
+            <p><a href="{% url 'learning_logs:edit_entry' entry.id %}">{{entry.text|linebreaks}}</a></p>
         {% endfor %}
     </ul>
     <a href="{% url 'learning_logs:new_entry' topic.id %}">Add a new entry</a>
