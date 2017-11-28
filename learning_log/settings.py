@@ -35,6 +35,8 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
+	#第三方应用程序
+	'bootstrap3',
 	# 我的APP
 	'learning_logs',
 	'users',
@@ -117,3 +119,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # 我的设置
 LOGIN_URL = '/users/login/'  # 重定向到登录页面
+#django-bootstrap3的设置
+BOOTSTRAP3={
+	'include_jquery':True,
+}
